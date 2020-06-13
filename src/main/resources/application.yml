@@ -1,0 +1,28 @@
+# archivo de propiedades.
+
+server:
+  servlet:
+    context-path: /veterinaria-api
+  port: 8080
+# Spring properties
+spring:
+  # Dev is active by default. This value can be overwritten by java arg param
+  profiles:
+    active: dev
+  application:
+    name: veterinaria-api
+  messages:
+    basename: bundles/apiLanguageBundle
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+  jmx:
+    default-domain: veterinaria-api
+logging:
+  level:
+    org.springframework: error
+    com.codapps: error
+  pattern:
+    console: '%d{yyyy-MM-dd HH:mm:ss} - %msg%n'
+    file: '%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n'
+  file: /opt/tomcat/logs/veterinaria-api.log

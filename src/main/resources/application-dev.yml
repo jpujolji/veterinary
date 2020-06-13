@@ -1,0 +1,21 @@
+spring:
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        default_schema:
+        ddl-auto: none
+        order_inserts: true
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        jdbc:
+          batch_size: 50
+        temp:
+          use_jdbc_metadata_defaults: false
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:mysql://127.0.0.1:3306/veterinaria?serverTimezone=UTC
+    username: root
+    password: Japujol29
+    hikari:
+      idle-timeout: 60000
+      maximum-pool-size: 50
